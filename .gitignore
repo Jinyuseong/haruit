@@ -1,0 +1,34 @@
+# === 공통 ===
+node_modules/
+dist/
+build/
+.tmp/
+coverage/
+
+# === 환경 변수 ===
+.env
+.env.*
+!.env.example
+
+# === 프론트엔드 (React, Vite, Next 등) ===
+apps/client/.vite/
+apps/client/.next/
+apps/client/.nuxt/
+apps/client/.cache/
+
+# === 백엔드 (NestJS) ===
+apps/server/.cache/
+apps/server/logs/
+
+# === IDE / OS 설정 파일 ===
+.vscode/
+.idea/
+.vs/
+.DS_Store
+Thumbs.db
+
+# === 로그 ===
+*.log
+npm-debug.log*
+yarn-*.log
+pnpm-debug.log*
