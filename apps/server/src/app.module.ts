@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { MissionsModule } from './missions/missions.module'; // ✅ 기존 모듈
 import { UsersModule } from './users/users.module';
+import { AuthModule } from './modules/auth/auth.module';
 
 @Module({
   imports: [
@@ -16,7 +17,8 @@ import { UsersModule } from './users/users.module';
       synchronize: true,      // 개발용: 자동 테이블 생성
     }),
     MissionsModule,
-    UsersModule, // 기존 모듈 그대로
+    UsersModule,
+    AuthModule, // 기존 모듈 그대로
   ],
 })
 export class AppModule {}
